@@ -63,6 +63,7 @@ function handleSelectedItem(event){
 
     const itemId = itemLi.dataset.id
 
+    console.log('Item ID: ', itemId)
     //verify selected itens, if exists, catch them
     const alreadySelected = selectedItems.findIndex( item => item == itemId)
 
@@ -77,8 +78,9 @@ function handleSelectedItem(event){
         selectedItems.push(itemId)
     }
 
-    console.log(selectedItems.sort())
-
+   // selectedItems.sort()
+    console.log("selectedItems"+ selectedItems)
+    
 //refresh hidden fields with selected itens
 collectedItems.value = selectedItems
 }
